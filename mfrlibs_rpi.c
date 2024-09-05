@@ -22,6 +22,8 @@
 #include <mfrTypes.h>
 #include <stdlib.h>
 #include <string.h>
+#include "mfr_wifi_types.h"
+#include "mfr_wifi_api.h"
 #define MAX_BUF_LEN 255
 #define SIZE 50
 #define MAC_ADDRESS_SIZE 12
@@ -317,4 +319,14 @@ mfrError_t mfrWriteImage(const char *str, const char *str1,
 mfrError_t mfr_init()
 {
     return mfrERR_NONE;
+}
+
+WIFI_API_RESULT WIFI_GetCredentials(WIFI_DATA *pData)
+{
+        return WIFI_API_RESULT_OPERATION_NOT_SUPPORTED;
+}
+
+WIFI_API_RESULT WIFI_SetCredentials(WIFI_DATA *pData)
+{
+        return WIFI_API_RESULT_OPERATION_NOT_SUPPORTED;
 }
